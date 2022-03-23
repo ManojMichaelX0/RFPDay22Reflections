@@ -8,6 +8,7 @@ namespace ReflectionsUseCasesDay22
 {
     public class MoodAnalyser
     {
+        public MoodAnalyser() { }
         public string message;
         public MoodAnalyser(string message)
         {
@@ -16,8 +17,28 @@ namespace ReflectionsUseCasesDay22
 
         public string AnalyserMood()
         {
+            //try
+            //{
+            //    if (this.message.Contains("Sad"))
+            //    {
+            //        return "SAD";
+            //    }
+            //    else
+            //    {
+            //        return "HAPPY";
+            //    }
+            //}
+            //catch
+            //{
+            //    return "HAPPY";
+
+            //}
             try
             {
+                if (this.message.Equals(string.Empty))
+                {
+                    throw new MoodAnalyserCustomExeption(MoodAnalyserCustomExeption.ExceptionType.Empty_Message, "Mood Should Not be Empty");
+                }
                 if (this.message.Contains("Sad"))
                 {
                     return "SAD";
@@ -27,10 +48,9 @@ namespace ReflectionsUseCasesDay22
                     return "HAPPY";
                 }
             }
-            catch
+            catch (NullReferenceException)
             {
-                return "HAPPY";
-
+                throw new MoodAnalyserCustomExeption(MoodAnalyserCustomExeption.ExceptionType.Null_Message, "Mood Should Not be Null");
             }
         }
     }
