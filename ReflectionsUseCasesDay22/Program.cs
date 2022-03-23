@@ -7,7 +7,10 @@ namespace ReflectionsUseCasesDay22
         static void Main(string[] args)
         {
             Console.WriteLine("Reflection UseCases");
-            
+            //UC 6
+            MoodAnalyser m = new MoodAnalyser();
+            m.AnalyserMood();
+
         }
     }
 }

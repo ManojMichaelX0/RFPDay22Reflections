@@ -58,5 +58,23 @@ namespace ReflectionsUseCasesDay22
                 throw new MoodAnalyserCustomExeption(MoodAnalyserCustomExeption.ExceptionType.No_Such_Class, "Class Not Found");
             }
         }
+
+        //UC 6 Invoke
+        public static string InvokeAnalyserMood(string message, string methodName)
+        {
+            try
+            {
+                Type type = Type.GetType("MoodaAnalyser");
+                object moodanalyser=MoodAnalyserFactory.CreateMoodAnalyserUsingParameterizedConstructor("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser",message);
+                MethodInfo analyseMood =type.GetMethod(methodName);
+                object mood = analyseMood.Invoke(moodanalyser, null);
+                return mood.ToString();
+            }
+            catch(NullReferenceException)
+            {
+                throw new MoodAnalyserCustomExeption(MoodAnalyserCustomExeption.ExceptionType.No_Such_Method, "Method is Not Found");
+            }
+        }
+        
     }
 }

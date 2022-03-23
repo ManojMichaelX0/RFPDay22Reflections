@@ -74,7 +74,7 @@ namespace TestProject1
             string message = null;
             object excepted = new MoodAnalyser(message);
             object obj = MoodAnalyserFactory.CreateMoodAnalyser("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser");
-            excepted.Equals(obj);           
+            excepted.Equals(obj);
         }
 
         //Test Case 4.2 ImProper Class Name 
@@ -86,7 +86,7 @@ namespace TestProject1
             {
                 object moodAnalyser = MoodAnalyserFactory.CreateMoodAnalyser("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser");
             }
-            catch(MoodAnalyserCustomExeption exception)
+            catch (MoodAnalyserCustomExeption exception)
             {
                 Assert.AreEqual(excepted, exception.Message);
             }
@@ -102,9 +102,9 @@ namespace TestProject1
             {
                 object moodAnalyser = MoodAnalyserFactory.CreateMoodAnalyser("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser");
             }
-            catch(MoodAnalyserCustomExeption exception)
+            catch (MoodAnalyserCustomExeption exception)
             {
-                Assert.AreEqual(excepted,exception.Message);
+                Assert.AreEqual(excepted, exception.Message);
             }
         }
 
@@ -113,9 +113,85 @@ namespace TestProject1
         public void GivenMoodAnalyserClassNameShouldReturnObjectUsingParameterizedConstructor()
         {
             object excepted = new MoodAnalyser("HAPPY");
-            object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParameterizedConstructor("ReflectionsUseCasesDay22.MoodAnalyser","MoodAnalyser", "HAPPY");
+            object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParameterizedConstructor("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser", "HAPPY");
             excepted.Equals(obj);
         }
+        //Test Case 5.2 ImProper Class Name 
+        [TestMethod]
+        public void GivenImproperClassNameThrowExceptionUsingParameterizedConstructor()
+        {
+            string excepted = "Class Not Found";
+            try
+            {
+                object moodAnalyser = MoodAnalyserFactory.CreateMoodAnalyserUsingParameterizedConstructor("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser", "HAPPY");
+            }
+            catch (MoodAnalyserCustomExeption exception)
+            {
+                Assert.AreEqual(excepted, exception.Message);
+            }
+        }
+
+        //Test Case 5.3 Improper Consructor Name 
+        [TestMethod]
+
+        public void GivenImproperConstructorNameThrowExceptionsUsingParameterizedConstructor()
+        {
+            string excepted = "Constructor is Not Found";
+            try
+            {
+                object moodAnalyser = MoodAnalyserFactory.CreateMoodAnalyserUsingParameterizedConstructor("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser", "HAPPY");
+            }
+            catch (MoodAnalyserCustomExeption exception)
+            {
+                Assert.AreEqual(excepted, exception.Message);
+            }
+        }
+        //Test Case 6.1 Invoke 
+        [TestMethod]
+        public void GivenHappyMessageReturnHappy()
+        {
+            string excepted = "Method is Not Found";
+            try
+            {
+                object moodAnalyser = MoodAnalyserFactory.CreateMoodAnalyserUsingParameterizedConstructor("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser", "HAPPY");
+            }
+            catch (MoodAnalyserCustomExeption exception)
+            {
+                Assert.AreEqual(excepted, exception.Message);
+            }
+        }
+
+        //Test Case 6.2 ImProper Method Name
+        [TestMethod]
+        public void GivenImproperMethodNameThrowException()
+        {
+            string excepted = "Method is Not Found";
+            try
+            {
+                object moodAnalyser = MoodAnalyserFactory.CreateMoodAnalyserUsingParameterizedConstructor("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser", "HAPPY");
+            }
+            catch (MoodAnalyserCustomExeption exception)
+            {
+                Assert.AreEqual(excepted, exception.Message);
+            }
+        }
+
+        //Test Case 6.3 Null
+        [TestMethod]
+        public void GivenNullMessage()
+        {
+            string excepted = " ";
+            try
+            {
+                object moodAnalyser = MoodAnalyserFactory.CreateMoodAnalyserUsingParameterizedConstructor("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser", "HAPPY");
+            }
+            catch (MoodAnalyserCustomExeption exception)
+            {
+                Assert.AreEqual(excepted, exception.Message);
+            }
+        }
+
+
     }
 
 }

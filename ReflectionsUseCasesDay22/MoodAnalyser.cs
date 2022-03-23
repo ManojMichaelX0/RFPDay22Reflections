@@ -33,11 +33,13 @@ namespace ReflectionsUseCasesDay22
             //    return "HAPPY";
 
             //}
+            Console.WriteLine("Enter Your Mood");
+            message = Console.ReadLine();
             try
             {
                 if (this.message.Equals(string.Empty))
                 {
-                    throw new MoodAnalyserCustomExeption(MoodAnalyserCustomExeption.ExceptionType.Empty_Message, "Mood Should Not be Empty");
+                    throw new MoodAnalyserCustomExeption(MoodAnalyserCustomExeption.ExceptionType.No_Such_Field, "No Such Field Error");
                 }
                 if (this.message.Contains("Sad"))
                 {
