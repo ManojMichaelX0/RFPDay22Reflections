@@ -9,7 +9,8 @@ using System.Text.RegularExpressions;
 namespace ReflectionsUseCasesDay22
 {
     public class MoodAnalyserFactory
-    {
+    { 
+        // UC 4 Default Constructor
         public static object CreateMoodAnalyser(string className , string constructorName)
         {
             string pattern = @"." + constructorName + "$";
@@ -31,6 +32,30 @@ namespace ReflectionsUseCasesDay22
             else
             {
                 throw new MoodAnalyserCustomExeption(MoodAnalyserCustomExeption.ExceptionType.No_Such_Method, "Constructor is Not Found");
+            }
+        }
+
+        //UC 5 Parameterized Constructor
+
+        public static object CreateMoodAnalyserUsingParameterizedConstructor(string className, string constructorName ,string message)
+        {
+            Type type = typeof(MoodAnalyser);
+            if (type.Name.Equals(className) || type.FullName.Equals(className))
+            {
+                if (type.Name.Equals(constructorName))
+                {
+                    ConstructorInfo con = type.GetConstructor(new[] { typeof(string) });
+                    object instance = con.Invoke(new object[] {message});
+                    return instance;
+                }
+                else
+                {
+                    throw new MoodAnalyserCustomExeption(MoodAnalyserCustomExeption.ExceptionType.No_Such_Method, "Constructor is Not Found");
+                }
+            }
+            else
+            {
+                throw new MoodAnalyserCustomExeption(MoodAnalyserCustomExeption.ExceptionType.No_Such_Class, "Class Not Found");
             }
         }
     }
