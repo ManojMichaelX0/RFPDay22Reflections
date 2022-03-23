@@ -116,6 +116,36 @@ namespace TestProject1
             object obj = MoodAnalyserFactory.CreateMoodAnalyserUsingParameterizedConstructor("ReflectionsUseCasesDay22.MoodAnalyser","MoodAnalyser", "HAPPY");
             excepted.Equals(obj);
         }
+        //Test Case 5.2 ImProper Class Name 
+        [TestMethod]
+        public void GivenImproperClassNameThrowExceptionUsingParameterizedConstructor()
+        {
+            string excepted = "Class Not Found";
+            try
+            {
+                object moodAnalyser = MoodAnalyserFactory.CreateMoodAnalyserUsingParameterizedConstructor("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser","HAPPY");
+            }
+            catch (MoodAnalyserCustomExeption exception)
+            {
+                Assert.AreEqual(excepted, exception.Message);
+            }
+        }
+
+        //Test Case 5.3 Improper Consructor Name 
+        [TestMethod]
+
+        public void GivenImproperConstructorNameThrowExceptionsUsingParameterizedConstructor()
+        {
+            string excepted = "Constructor is Not Found";
+            try
+            {
+                object moodAnalyser = MoodAnalyserFactory.CreateMoodAnalyserUsingParameterizedConstructor("ReflectionsUseCasesDay22.MoodAnalyser", "MoodAnalyser","HAPPY");
+            }
+            catch (MoodAnalyserCustomExeption exception)
+            {
+                Assert.AreEqual(excepted, exception.Message);
+            }
+        }
     }
 
 }
