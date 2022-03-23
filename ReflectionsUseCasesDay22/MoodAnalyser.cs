@@ -16,21 +16,13 @@ namespace ReflectionsUseCasesDay22
 
         public string AnalyserMood()
         {
-            try
+            if (this.message.Contains("Sad"))
             {
-                if (this.message.Contains("Sad"))
-                {
-                    return "SAD";
-                }
-                else
-                {
-                    return "HAPPY";
-                }
+                return "SAD";
             }
-            catch
+            else
             {
                 return "HAPPY";
-
             }
         }
     }
