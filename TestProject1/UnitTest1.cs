@@ -6,8 +6,7 @@ namespace TestProject1
     [TestClass]
     public class UnitTest1
     {
-
-
+        // Uc 1 Test case 1.1
         [TestMethod]
         public void GivenSadMoodShouldReturnSad()
         {
@@ -19,6 +18,7 @@ namespace TestProject1
 
             Assert.AreEqual(expected, mood);
         }
+        // Uc 1 Test case 1.
         [TestMethod]
         public void GivenHappyShouldReturnHappy(string message)
         {
