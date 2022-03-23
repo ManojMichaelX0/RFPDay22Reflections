@@ -1,0 +1,16 @@
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\bin\Debug\net5.0\ReflectionsUseCasesDay22.exe
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\bin\Debug\net5.0\ReflectionsUseCasesDay22.deps.json
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\bin\Debug\net5.0\ReflectionsUseCasesDay22.runtimeconfig.json
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\bin\Debug\net5.0\ReflectionsUseCasesDay22.runtimeconfig.dev.json
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\bin\Debug\net5.0\ReflectionsUseCasesDay22.dll
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\bin\Debug\net5.0\ReflectionsUseCasesDay22.pdb
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\obj\Debug\net5.0\ReflectionsUseCasesDay22.csproj.AssemblyReference.cache
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\obj\Debug\net5.0\ReflectionsUseCasesDay22.GeneratedMSBuildEditorConfig.editorconfig
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\obj\Debug\net5.0\ReflectionsUseCasesDay22.AssemblyInfoInputs.cache
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\obj\Debug\net5.0\ReflectionsUseCasesDay22.AssemblyInfo.cs
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\obj\Debug\net5.0\ReflectionsUseCasesDay22.csproj.CoreCompileInputs.cache
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\obj\Debug\net5.0\ReflectionsUseCasesDay22.dll
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\obj\Debug\net5.0\refint\ReflectionsUseCasesDay22.dll
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\obj\Debug\net5.0\ReflectionsUseCasesDay22.pdb
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\obj\Debug\net5.0\ReflectionsUseCasesDay22.genruntimeconfig.cache
+D:\.net\Day22Rfp-Reflection\ReflectionsUseCasesDay22\ReflectionsUseCasesDay22\obj\Debug\net5.0\ref\ReflectionsUseCasesDay22.dll
