@@ -20,7 +20,7 @@ namespace TestProject1
             Assert.AreEqual(expected, mood);
         }
         [TestMethod]
-        public void GivenHappyShouldReturnHappy(string message)
+        public void GivenHappyShouldReturnHappy()
         {
             string expected = "HAPPY";
             string message1 = " I am in Happy Mood";
