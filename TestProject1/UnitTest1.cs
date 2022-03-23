@@ -18,8 +18,12 @@ namespace TestProject1
 
             Assert.AreEqual(expected, mood);
         }
-        // Uc 1 Test case 1.
+        
         [TestMethod]
+        // Uc 1 Test case 1.2
+        [DataRow("I am in Happy Mood")]
+        // Uc 2 Null DataRow
+        [DataRow(null)]
         public void GivenHappyShouldReturnHappy(string message)
         {
             string expected = "HAPPY";

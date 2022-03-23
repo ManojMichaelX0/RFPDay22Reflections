@@ -26,6 +26,7 @@ namespace ReflectionsUseCasesDay22
                 {
                     return "HAPPY";
                 }
+
             }
             catch
             {
