@@ -6,7 +6,7 @@ namespace ReflectionsUseCasesDay22
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Day 22 Reflections");
         }
     }
 }
